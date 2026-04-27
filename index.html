@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Planificador Pedagógico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Secuencias Didácticas</h1>
+        <p>Centro Educativo Zapallal / Jose Antonio Sucre</p>
+    </header>
 
+    <main class="container">
+        <label>Selecciona la Materia:</label>
+        <select id="materia">
+            <option value="tecnologia">Tecnología de la Información</option>
+        </select>
+
+        <label>Nivel de Tecnología en el Aula:</label>
+        <select id="nivel-tech">
+            <option value="alto">Alto (Internet y Laptops)</option>
+            <option value="medio">Medio (Proyector/Celulares)</option>
+            <option value="bajo">Bajo (Sin Internet)</option>
+            <option value="ninguno">Ninguno (Material impreso)</option>
+        </select>
+
+        <button onclick="enviarAGemini()">Generar Secuencia</button>
+
+        <div id="resultado-plan">
+            </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
