@@ -8,13 +8,55 @@
 <body>
     <header>
         <h1>Sistema de Secuencias Didácticas</h1>
-        <p>Centro Educativo Zapallal / Jose Antonio Sucre</p>
+        <p>Generación de planes educativos personalizados</p>
     </header>
 
     <main class="container">
-        <label>Selecciona la Materia:</label>
+        <label for="nombre-docente">Nombre del Docente:</label>
+        <input type="text" id="nombre-docente" placeholder="Escriba su nombre completo">
+
+        <label for="centro-educativo">Centro Educativo:</label>
+        <input type="text" id="centro-educativo" placeholder="Nombre de la institución o escuela">
+
+        <label for="materia">Selecciona la Materia y Grado:</label>
         <select id="materia">
-            <option value="tecnologia">Tecnología de la Información</option>
+            <option value="">-- Seleccione una opción --</option>
+            
+            <optgroup label="Primaria - 1° Grado">
+                <option value="matematicas_1">Matemáticas | 1°</option>
+                <option value="espanol_1">Español | 1°</option>
+                <option value="ciencias_naturales_1">Ciencias Naturales | 1°</option>
+                <option value="ciencias_sociales_1">Ciencias Sociales | 1°</option>
+                <option value="expresiones_artisticas_1">Expresiones Artísticas | 1°</option>
+                <option value="educacion_fisica_1">Educación Física | 1°</option>
+                <option value="ingles_1">Inglés | 1°</option>
+                <option value="religion_1">Religión | 1°</option>
+                <option value="tecnologia_1">Tecnología | 1°</option>
+                <option value="agricultura_1">Agricultura | 1°</option>
+            </optgroup>
+
+            <optgroup label="Educación Pre-Media">
+                <option value="matematicas_pm">Matemáticas | 7°-9°</option>
+                <option value="espanol_pm">Español | 7°-9°</option>
+                <option value="geografia_pm">Geografía | 7°-9°</option>
+                <option value="historia_pm">Historia | 7°-9°</option>
+                <option value="civica_pm">Cívica | 7°-9°</option>
+                <option value="ciencias_naturales_pm">Ciencias Naturales | 7°-9°</option>
+            </optgroup>
+
+            <optgroup label="Educación Media">
+                <option value="biologia_m">Biología | 10°-12°</option>
+                <option value="quimica_m">Química | 10°-12°</option>
+                <option value="fisica_m">Física | 10°-12°</option>
+                <option value="logica_m">Lógica | 10°</option>
+                <option value="filosofia_m">Filosofía | 11°-12°</option>
+                <option value="matematicas_m">Matemáticas | 10°-12°</option>
+                <option value="espanol_m">Español | 10°-12°</option>
+                <option value="historia_panama_m">Historia de Panamá | 10°-12°</option>
+                <option value="geografia_panama_m">Geografía de Panamá | 10°-12°</option>
+                <option value="programacion_m">Programación | 11°-12°</option>
+                <option value="contabilidad_m">Contabilidad | 10°-12°</option>
+            </optgroup>
         </select>
 
         <label>Nivel de Tecnología en el Aula:</label>
@@ -27,8 +69,7 @@
 
         <button onclick="enviarAGemini()">Generar Secuencia</button>
 
-        <div id="resultado-plan">
-            </div>
+        <div id="resultado-plan"></div>
     </main>
 
     <script src="script.js"></script>
